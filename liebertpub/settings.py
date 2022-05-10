@@ -20,7 +20,7 @@ ROBOTSTXT_OBEY = False
 
 
 
-# COOKIES_ENABLED = True
+COOKIES_ENABLED = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
