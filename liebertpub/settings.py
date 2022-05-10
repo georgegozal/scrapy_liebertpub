@@ -1,8 +1,3 @@
-
-#     https://docs.scrapy.org/en/latest/topics/settings.html
-#     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-
 BOT_NAME = 'liebertpub'
 
 SPIDER_MODULES = ['liebertpub.spiders']
@@ -20,10 +15,7 @@ ROBOTSTXT_OBEY = False
 
 
 
-COOKIES_ENABLED = True
-
-# Disable Telnet Console (enabled by default)
-#TELNETCONSOLE_ENABLED = False
+COOKIES_ENABLED = False
 
 
 DEFAULT_REQUEST_HEADERS = {
@@ -46,50 +38,8 @@ DEFAULT_REQUEST_HEADERS = {
     "Upgrade-Insecure-Requests":"1"    
 }
 
-# Enable or disable spider middlewares
-# See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#     'liebertpub.middlewares.LiebertpubSpiderMiddleware': 543,
-# }
-
-# Enable or disable downloader middlewares
-# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#     'liebertpub.middlewares.LiebertpubDownloaderMiddleware': 543,
-# }
-
 CONCURRENT_REQUESTS = 1
 DOWNLOAD_DELAY = 5
 AUTOTHROTTLE_MAX_DELAY = 3
 AUTOTHROTTLE_ENABLED = True
 AUTOTHROTTLE_START_DELAY = 5
-
-# SPLASH_URL = 'http://localhost:8050/'
-# DOWNLOADER_MIDDLEWARES = {
-#     'scrapy_splash.SplashCookiesMiddleware': 723,
-#     'scrapy_splash.SplashMiddleware': 725,
-#     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
-# }
-
-# SPIDER_MIDDLEWARES = {
-#     'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
-# }
-
-# DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
-
-# HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
-# ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
-
-# DOWNLOADER_MIDDLEWARES = {
-#     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
-#     'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
-#     'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,
-#     'scrapy_fake_useragent.middleware.RetryUserAgentMiddleware': 401,
-# }
-# FAKEUSERAGENT_PROVIDERS = [
-#     'scrapy_fake_useragent.providers.FakeUserAgentProvider',  # this is the first provider we'll try
-#     'scrapy_fake_useragent.providers.FakerProvider',  # if FakeUserAgentProvider fails, we'll use faker to generate a user-agent string for us
-#     'scrapy_fake_useragent.providers.FixedUserAgentProvider',  # fall back to USER_AGENT value
-# ]
-# USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36'
-# FAKEUSERAGENT_FALLBACK = 'Mozilla/5.0 (Android; Mobile; rv:40.0)'
